@@ -16,7 +16,7 @@ class ApiClient {
                 builder.addInterceptor { chain ->
                     var request = chain.request()
                     val url = request.url.newBuilder().addQueryParameter("api_key",
-                        "c1c09e7cbaf70bc4dd30b5c39c928b95").build()
+                        "API_KEY").build()
                     request = request.newBuilder().url(url).build()
                     chain.proceed(request)
                 }
